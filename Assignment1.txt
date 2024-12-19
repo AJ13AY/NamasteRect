@@ -1,0 +1,394 @@
+1)What is Emmet?
+
+Emmet is a productivity tool used primarily by web developers to write HTML, CSS, and other markup languages faster. It provides shorthand abbreviations that expand into full-fledged code snippets, allowing developers to generate boilerplate code quickly and efficiently. Emmet is widely supported in text editors and integrated development environments (IDEs) like Visual Studio Code, Sublime Text, Atom, and many others.
+
+### Key Features of Emmet:
+1. **Abbreviation Expansion**: 
+   - You can type abbreviations like `div.container>ul>li*5` and expand it into:
+     ```html
+     <div class="container">
+         <ul>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+         </ul>
+     </div>
+     ```
+
+2. **HTML Boilerplate**:
+   - Typing `!` and expanding it generates a full HTML5 boilerplate structure.
+
+3. **CSS Abbreviations**:
+   - For instance, typing `m10` and expanding it generates `margin: 10px;`.
+
+4. **Navigation and Wrapping**:
+   - You can select code and wrap it with tags easily.
+
+5. **Customization**:
+   - Emmet allows developers to configure and create custom snippets or expanders.
+
+6. **Multi-caret Editing**:
+   - You can use multiple cursors to apply changes or insert snippets across different places in a file.
+
+Emmet significantly speeds up coding, reduces errors, and improves workflow for tasks like repetitive tag structures, attribute additions, and styles. It’s a must-have for front-end developers.
+
+
+---
+
+ 2)**Key Differences Between a Library and a Framework**
+
+1. **Control Flow**:
+   - **Library**: You are in control. You decide when and how to use its functions.
+   - **Framework**: The framework controls the flow of your application and dictates when your code runs.
+
+2. **Inversion of Control (IoC)**:
+   - **Library**: No IoC. You call the library’s methods as needed.
+   - **Framework**: Implements IoC, where the framework calls your code at specific points.
+
+3. **Flexibility**:
+   - **Library**: Offers more flexibility since you can use only the parts you need.
+   - **Framework**: Enforces rules, structures, and design patterns, which can limit flexibility.
+
+4. **Learning Curve**:
+   - **Library**: Easier to learn and integrate into projects due to its focused functionality.
+   - **Framework**: Requires more time to learn because it defines the application's architecture.
+
+5. **Examples**:
+   - **Library**: jQuery, Lodash, Axios.
+   - **Framework**: React, Angular, Django, Spring.
+
+---
+
+### **Tip for Interviews**
+If asked for real-world examples or analogies, you can say:
+
+- **Library**: "It's like choosing individual ingredients to cook a dish—you decide what to use and how."
+- **Framework**: "It's like following a recipe where the steps and structure are pre-defined."
+
+3)What is CDN? Why do we use it?
+
+
+---
+
+### **What is a CDN?**
+A **Content Delivery Network (CDN)** is a distributed network of servers strategically placed across the globe to deliver web content (e.g., images, videos, CSS, JavaScript) to users more efficiently by caching it closer to their geographical location.
+
+---
+
+### **Why Do We Use a CDN?**
+1. **Improves Performance**:
+   - Reduces latency by delivering content from the nearest server.
+2. **Enhances Reliability**:
+   - Provides redundancy; if one server fails, another can serve the request.
+3. **Reduces Load on the Origin Server**:
+   - Caches resources to offload traffic from the main server.
+4. **Enables Scalability**:
+   - Handles high traffic and spikes efficiently.
+5. **Global Reach**:
+   - Ensures fast content delivery to users worldwide.
+6. **Increases Security**:
+   - Offers features like DDoS protection, SSL/TLS encryption, and firewalls.
+7. **Optimizes Cost**:
+   - Reduces bandwidth usage on the origin server.
+
+---
+
+### **How Does a CDN Work?**
+1. **Caching**: Content is cached on servers (edge servers) located in multiple regions.
+2. **Edge Servers**: Serve content from the server closest to the user’s location.
+3. **Load Balancing**: Manages traffic across multiple servers to ensure smooth delivery.
+
+---
+
+### **Examples of CDN Providers**:
+- Cloudflare
+- Amazon CloudFront
+- Akamai
+- Google Cloud CDN
+- Microsoft Azure CDN
+
+---
+
+### **Example Scenario for Context**:
+- **Question**: *Why would you use a CDN for a global e-commerce website?*
+  - **Answer**: "A CDN ensures faster load times for customers globally by reducing latency and provides redundancy to handle traffic spikes during sales events. It also enhances security with features like DDoS protection."
+
+---
+
+4)Why is React known as React?
+
+React is called **React** because it is designed to enable developers to **react** efficiently to changes in application data. The name reflects its core philosophy of dynamically responding to changes in the underlying data and efficiently updating the user interface (UI).
+
+### **Key Reasons Behind the Name "React"**:
+1. **Reactive Updates**:
+   - React follows a **reactive programming paradigm**, where the UI automatically updates in response to changes in the application's state or data.
+   - This makes it easy to build interactive and dynamic user interfaces.
+
+2. **Declarative Programming**:
+   - With React, developers declare how the UI should look based on the current state, and React takes care of reacting to state changes and updating the DOM efficiently.
+
+3. **Reacting to User Interactions**:
+   - React is designed to build applications that respond dynamically to user inputs and interactions, such as clicks, typing, or other events.
+
+4. **Efficient Re-rendering with Virtual DOM**:
+   - React uses a **virtual DOM** to "react" to data changes by efficiently calculating the minimal updates required to the real DOM, improving performance.
+
+### **In Summary**:
+The name "React" encapsulates its ability to:
+- **React** to changes in data/state.
+- Automatically re-render and update the UI dynamically.
+- Provide a reactive, declarative, and efficient approach to building modern web applications.
+
+5)What is crossorigin in script tag?
+
+The `crossorigin` attribute in a `<script>` tag is used to manage **Cross-Origin Resource Sharing (CORS)** when loading scripts from external domains. It specifies how the browser should handle the CORS requests for the script file, especially in relation to fetching and sharing credentials (such as cookies or HTTP authentication).
+
+---
+
+### **Syntax**:
+```html
+<script src="https://example.com/script.js" crossorigin="anonymous"></script>
+```
+
+---
+
+### **Why Use `crossorigin`?**
+When a script is loaded from a different origin (a cross-origin request), the browser applies certain security restrictions. The `crossorigin` attribute controls how these restrictions are handled. It is often used in scenarios like:
+
+1. **Accessing Cross-Origin Resources Securely**:
+   - When the script makes additional requests (e.g., for data, images, or APIs) to its origin, it ensures those requests comply with CORS policies.
+
+2. **For Subresource Integrity (SRI)**:
+   - When using the `integrity` attribute (to ensure the script hasn't been tampered with), the `crossorigin` attribute must be set correctly for SRI to work.
+
+---
+
+### **Values of `crossorigin`**:
+1. **`anonymous`** (default behavior for most scenarios):
+   - Sends a cross-origin request without credentials (cookies, HTTP authentication, or client-side certificates).
+   - Example:
+     ```html
+     <script src="https://example.com/script.js" crossorigin="anonymous"></script>
+     ```
+
+2. **`use-credentials`**:
+   - Sends a cross-origin request with credentials included.
+   - Use this when the external resource requires authentication or custom headers.
+   - Example:
+     ```html
+     <script src="https://example.com/script.js" crossorigin="use-credentials"></script>
+     ```
+
+3. **No Value**:
+   - If `crossorigin` is omitted, the browser's default behavior depends on the context:
+     - For same-origin requests: No restrictions apply.
+     - For cross-origin requests: Credentials are not included by default.
+
+---
+
+### **Common Use Cases**:
+1. **Subresource Integrity (SRI)**:
+   - Ensures a script’s integrity (e.g., preventing attacks like CDN tampering).
+   - Example:
+     ```html
+     <script src="https://example.com/script.js" integrity="sha384-..." crossorigin="anonymous"></script>
+     ```
+
+2. **Cross-Origin Script Loading**:
+   - Loading a third-party library or script while ensuring proper CORS handling.
+
+---
+
+### **Key Notes**:
+- The server hosting the resource must support CORS and send the appropriate headers (e.g., `Access-Control-Allow-Origin`).
+- Misconfiguring `crossorigin` can lead to errors or blocked scripts in the browser.
+
+---
+
+### **In Summary**:
+The `crossorigin` attribute is essential for handling security and CORS policies when loading external scripts. It ensures scripts are fetched safely and work correctly with features like Subresource Integrity and authenticated requests.
+
+
+
+6)The key difference between **React** and **ReactDOM** lies in their roles and responsibilities within a React application. Here's a clear breakdown:
+
+---
+
+### **1. React**
+- **Purpose**: React is the core library responsible for building and managing the **user interface**.
+- **Role**:
+  - Provides tools for creating components using JSX or JavaScript.
+  - Manages the component lifecycle and state.
+  - Implements the virtual DOM for efficient updates and rendering.
+- **Key Responsibility**: Focused on the logic and structure of UI components, independent of the platform (web, mobile, etc.).
+- **Example Usage**:
+  ```javascript
+  import React from 'react';
+
+  function App() {
+      return <h1>Hello, React!</h1>;
+  }
+  ```
+
+---
+
+### **2. ReactDOM**
+- **Purpose**: ReactDOM is the library responsible for **rendering React components** to the **DOM** in web applications.
+- **Role**:
+  - Provides methods like `ReactDOM.render()` to mount React components onto a DOM element.
+  - Bridges the gap between React and the browser's DOM.
+  - Includes features like `ReactDOM.createPortal()` for rendering content outside the main DOM hierarchy.
+- **Key Responsibility**: Ensures React components integrate with the actual browser DOM.
+- **Example Usage**:
+  ```javascript
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+
+  const rootElement = document.getElementById('root');
+  ReactDOM.render(<App />, rootElement);
+  ```
+
+---
+
+### **Key Differences**
+| **Aspect**        | **React**                                     | **ReactDOM**                                  |
+|--------------------|-----------------------------------------------|-----------------------------------------------|
+| **Focus**         | Building UI components and managing state.    | Rendering components to the browser DOM.     |
+| **Platform**      | Platform-agnostic (used for web, mobile, etc.). | Specific to web applications.                |
+| **Core Methods**  | `React.createElement()`, hooks, component logic. | `ReactDOM.render()`, `ReactDOM.createPortal()`. |
+
+---
+
+### **Why Are They Separate?**
+React and ReactDOM are split into two libraries to maintain platform independence:
+- **React**: Handles the logic of components, which can be used in other platforms (e.g., React Native for mobile).
+- **ReactDOM**: Specific to web applications and handles DOM-specific tasks.
+
+---
+
+### **In Summary**:
+- **React** is the heart of the application, responsible for building and managing UI components.
+- **ReactDOM** is the tool that integrates React with the browser DOM for rendering.
+
+
+
+7)The main difference between **react.development.js** and **react.production.js** files provided via a CDN lies in their intended use cases, optimizations, and performance.
+
+---
+
+### **1. react.development.js**
+- **Purpose**: Used during **development** to provide detailed debugging information and error messages.
+- **Features**:
+  - Includes helpful warnings and error messages in the console.
+  - Provides detailed stack traces for debugging.
+  - Enables tools like React DevTools to give additional insights.
+  - Not optimized for performance.
+- **File Size**: Larger because it contains extra code for warnings, error handling, and debug information.
+- **Usage**: 
+  - Use this version when building or debugging an application in a local or staging environment.
+  - Example (via CDN):
+    ```html
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    ```
+
+---
+
+### **2. react.production.js**
+- **Purpose**: Used in **production** to ensure high performance and smaller bundle size.
+- **Features**:
+  - Stripped of all development-specific warnings and error messages.
+  - Optimized for performance (e.g., minified code, tree-shaking).
+  - Runs faster and consumes fewer resources.
+- **File Size**: Smaller because it removes unnecessary development code.
+- **Usage**:
+  - Use this version when deploying the application to production environments to ensure optimal performance.
+  - Example (via CDN):
+    ```html
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    ```
+
+---
+
+### **Key Differences**
+| **Aspect**            | **react.development.js**                  | **react.production.js**                    |
+|------------------------|-------------------------------------------|--------------------------------------------|
+| **Intended Use**       | Development environments.                 | Production environments.                   |
+| **Debugging**          | Includes detailed error messages and warnings. | Stripped of debugging features.            |
+| **Performance**        | Not optimized; slower.                    | Optimized for speed and efficiency.        |
+| **File Size**          | Larger due to additional debugging code.  | Smaller due to minification and optimizations. |
+| **Warnings**           | Provides runtime warnings for common mistakes. | No warnings; assumes error-free code.      |
+
+---
+
+### **When to Use Which Version?**
+1. **Development**: Use `react.development.js` to take advantage of debugging tools and detailed error messages.
+2. **Production**: Use `react.production.js` for better performance, smaller file size, and no unnecessary warnings.
+
+---
+
+### **Best Practice for Deployment**
+- Always switch to the **production version** when deploying to production.
+- If using tools like Webpack or Vite, ensure `NODE_ENV` is set to `production` during the build process to automatically include the production version of React.
+
+
+8) What is async and defer?
+
+The **`async`** and **`defer`** attributes in the `<script>` tag control how JavaScript files are loaded and executed in a webpage. Both are used to improve page performance by altering the default behavior of script loading.
+
+---
+
+### **Default Behavior of `<script>`**
+- By default, when a `<script>` tag is encountered:
+  1. The browser stops parsing the HTML.
+  2. Downloads the script.
+  3. Executes the script.
+  4. Resumes HTML parsing after execution.
+
+This can delay rendering of the page, especially if the script is large or slow to load.
+
+---
+
+### **`async` Attribute**
+- **Behavior**: 
+  - The script is downloaded in parallel (asynchronously) with HTML parsing.
+  - Once the script is downloaded, it is executed immediately, pausing HTML parsing.
+- **Use Case**: For scripts that do not depend on other scripts or the DOM (e.g., analytics or tracking scripts).
+- **Execution Order**: Not guaranteed; scripts with `async` may execute in the order they finish downloading.
+- **Example**:
+  ```html
+  <script src="script.js" async></script>
+  ```
+
+---
+
+### **`defer` Attribute**
+- **Behavior**:
+  - The script is downloaded in parallel (like `async`) with HTML parsing.
+  - However, the execution is deferred until the HTML document is fully parsed.
+- **Use Case**: For scripts that depend on the DOM being fully built or need to execute in a specific order.
+- **Execution Order**: Guaranteed; scripts with `defer` are executed in the order they appear in the document.
+- **Example**:
+  ```html
+  <script src="script.js" defer></script>
+  ```
+
+---
+
+### **Key Differences Between `async` and `defer`**
+
+| **Aspect**            | **`async`**                               | **`defer`**                                |
+|------------------------|-------------------------------------------|--------------------------------------------|
+| **HTML Parsing**       | Continues while script downloads.         | Continues while script downloads.          |
+| **Script Execution**   | Pauses HTML parsing when the script is ready. | After HTML parsing is complete.            |
+| **Execution Order**    | Not guaranteed (depends on download speed). | Guaranteed in the order of appearance.     |
+| **Use Case**           | Independent scripts (e.g., analytics).   | Scripts that depend on the DOM or other scripts. |
+
+---
+
+### **Summary**
+- Use **`async`** for scripts that don't depend on the DOM or other scripts, where execution timing doesn't matter.
+- Use **`defer`** for scripts that rely on the DOM being fully loaded or need to execute in a specific order.
